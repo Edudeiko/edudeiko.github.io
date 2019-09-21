@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open data hub -- Miami-Dade
+title: Miami-Dade County Open Data Hub
 ---
 
 Recently I have discovered [Miami-Dade county open data hub](https://gis-mdc.opendata.arcgis.com).
