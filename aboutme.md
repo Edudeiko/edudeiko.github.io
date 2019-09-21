@@ -4,7 +4,7 @@ title: About me
 subtitle: Labda Student
 ---
 
-My name is Evgenii Dudeiko (Ed). I have many great things hapening to me:
+My name is Evgenii Dudeiko (Ed). I have many great things happening to me:
 
 - My family
 - Data science
