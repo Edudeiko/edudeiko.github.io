@@ -1,6 +1,6 @@
 ---
 title: Python Data Story Telling
-image: /img/hello_world.jpeg
+image: /img/predator_offender.png
 ---
 
 I finished my first project. I used [Miami-Dade County Open Data Hub](https://gis-mdc.opendata.arcgis.com) for it's purpose.
