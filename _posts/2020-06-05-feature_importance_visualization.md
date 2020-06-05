@@ -1,6 +1,6 @@
 ---
-title: Feature importance visualization using heart disease dataset
-subtitle: Create models to predict a heart disease
+title: Feature Importance Visualization Using Heart Disease Dataset
+subtitle: Create Models To Predict A Heart Disease
 image: /img/features_importance.png
 ---
 
