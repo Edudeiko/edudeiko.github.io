@@ -1,6 +1,5 @@
 ---
 title: Features importance visualization using heart disease dataset
-subtitle: applied different models
 image: /img/features_importance.png
 ---
 I've experimenton with the feature importnce visualization using the heart desease datase which you can find [here](https://www.kaggle.com/ronitf/heart-disease-uci).
