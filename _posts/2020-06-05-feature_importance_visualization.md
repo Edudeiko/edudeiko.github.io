@@ -1,6 +1,6 @@
 ---
 title: Features importance visualization using heart disease dataset
-subtitle: applied different models
+subtitle: and applied different models to get best prediction
 image: /img/features_importance.png
 ---
 
