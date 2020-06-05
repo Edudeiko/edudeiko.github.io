@@ -1,10 +1,10 @@
 ---
 layout: page
 title: About me
-subtitle: Labda Student
+subtitle: Data Scientist
 ---
 
-My name is Evgenii Dudeiko (Ed). I have many great things happening with me:
+My name is Ed. I have many great things happening to me right now:
 
 - My family
 - Data science
