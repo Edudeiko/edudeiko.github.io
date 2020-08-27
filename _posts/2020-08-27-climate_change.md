@@ -64,55 +64,13 @@ df_2000.head()
 df_2000_by_month = df_2000.groupby(['Date','Country']).sum().reset_index()
 df_2000_by_month.head()
 ```
-            ##### Visualization
-            ```
-            fig = px.choropleth(df_2000_by_month, locations='Country', locationmode='country names', 
-                                color='Average_Temp_Farenheit', hover_data=['Average_Temp_Celsius'],
-                                hover_name='Country', animation_frame='Date')
-
-            fig.update_layout(title_text='Average Temperature Change from 2010-01-01 to 2013-01-01', title_x = 0.5, 
-                              geo=dict(showframe = False, showcoastlines = False))
-            fig.show()
-            ```
-            You can find the GitHub page with all the code by pressing the GitHub icon below.
-
-**Here is some bold text**
-
-## Here is a secondary heading
-
-Here's a useless table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-Here's a code chunk:
-
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
-
-And here is the same code with syntax highlighting:
-
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
+##### Visualization
 ```
+fig = px.choropleth(df_2000_by_month, locations='Country', locationmode='country names', 
+                    color='Average_Temp_Farenheit', hover_data=['Average_Temp_Celsius'],
+                    hover_name='Country', animation_frame='Date')
 
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
-
+fig.update_layout(title_text='Average Temperature Change from 2010-01-01 to 2013-01-01', title_x = 0.5, 
+                  geo=dict(showframe = False, showcoastlines = False))
+fig.show()
+```
