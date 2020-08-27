@@ -3,8 +3,8 @@ title: Climate Change Overview
 subtitle: Visualize climate change with the help of Plotly
 image: /img/climate_change.png
 ---
-You can see how our climate changes over the years with the help of plotly interactive map. By pointing at any country and by sliding over the years you can see how the average temperature changes across the globe.
-Deployed Heroku app can be fund [here](https://climate-change-overview.herokuapp.com)
+You can see how climate changes over the years with the help of plotly interactive map. By pointing at any country and by sliding over the years you can see how the average temperature changes across the globe.
+Deployed Heroku app can be found [here](https://climate-change-overview.herokuapp.com)
 Link to GitHub [here](https://github.com/Edudeiko/climate_change)
 
 #### Import libraries first
