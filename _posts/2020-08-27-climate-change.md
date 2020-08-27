@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CLIMATE CHANGE OVERVIEW
-subtitle: Visualize climate change with the help of [Plotly](https://plotly.com/python/)
+subtitle: Visualize climate change with the help of Plotly
 image: /img/climate_change.png
 ---
 
