@@ -33,10 +33,10 @@ print(df.shape)
 df.head()
 ```
 ##### Creating Celsius to Farenheit function
-            ```
-            def convert_to_farenheit (c):
-                return (c*9/5)+32
-            ```
+```
+def convert_to_farenheit (c):
+    return (c*9/5)+32
+```
             ##### Round up the result to 2 decimals as well
             ```
             df['Average_Temp_Farenheit'] = df['Average_Temp_Celsius'].apply(convert_to_farenheit).round(2)
