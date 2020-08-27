@@ -5,7 +5,7 @@ image: /img/climate_change.png
 ---
 
 ##### Import libraries first
-```
+```javascript
 import numpy as np
 import pandas as pd
 import plotly as py
@@ -16,7 +16,7 @@ from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 ```
 ##### load the data
 you can download the original data from [here](http://google.com)
-```
+```javascript
 df = pd.read_csv('../assets/GlobalLandTemperaturesByCountry.csv')
 ```
 ##### Look at the data, find the Null values, clean the data
@@ -33,7 +33,7 @@ print(df.shape)
 df.head()
 ```
 ##### Creating Celsius to Farenheit function
-```
+```javascript
 def convert_to_farenheit (c):
     return (c*9/5)+32
 ```
