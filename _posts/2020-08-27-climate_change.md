@@ -1,10 +1,7 @@
 ---
-layout: post
 title: Climate Change Overview
 subtitle: Visualize climate change with the help of Plotly
 image: /img/climate_change.png
-published: true
-date: '2020-08-27'
 ---
 
 ##### Import libraries first
@@ -18,24 +15,24 @@ from plotly.subplots import make_subplots
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 ```
 ##### load the data
-            you can download the original data from [here](http://google.com)
-            ```
-            df = pd.read_csv('../assets/GlobalLandTemperaturesByCountry.csv')
-            ```
-            ##### Look at the data, find the Null values, clean the data
-            ```
-            print(df.shape)
-            df.head()
-            df.tail()
-            df.isnull().sum()
-            df = df.drop('AverageTemperatureUncertainty', axis=1)
-            df = df.rename(columns={'dt': 'Date', 'AverageTemperature': 'Average_Temp'})
-            df.isnull().sum()
-            df = df.dropna()
-            print(df.shape)
-            df.head()
-            ```
-            ##### Creating Celsius to Farenheit function
+you can download the original data from [here](http://google.com)
+```
+df = pd.read_csv('../assets/GlobalLandTemperaturesByCountry.csv')
+```
+##### Look at the data, find the Null values, clean the data
+```
+print(df.shape)
+df.head()
+df.tail()
+df.isnull().sum()
+df = df.drop('AverageTemperatureUncertainty', axis=1)
+df = df.rename(columns={'dt': 'Date', 'AverageTemperature': 'Average_Temp'})
+df.isnull().sum()
+df = df.dropna()
+print(df.shape)
+df.head()
+```
+##### Creating Celsius to Farenheit function
             ```
             def convert_to_farenheit (c):
                 return (c*9/5)+32
@@ -93,15 +90,6 @@ Here's a useless table:
 | Ten | Eleven | Nine |
 | Seven | Eight | Six |
 | Two | Three | One |
-
-
-How about a yummy crepe?
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-It can also be centered!
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
 
 Here's a code chunk:
 
