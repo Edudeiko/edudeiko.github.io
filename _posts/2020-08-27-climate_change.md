@@ -20,7 +20,7 @@ you can download the original data from [here](http://google.com)
 df = pd.read_csv('../assets/GlobalLandTemperaturesByCountry.csv')
 ```
 ##### Look at the data, find the Null values, clean the data
-```
+```javascript
 print(df.shape)
 df.head()
 df.tail()
