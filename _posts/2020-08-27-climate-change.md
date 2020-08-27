@@ -3,6 +3,8 @@ layout: post
 title: Climate Change Overview
 subtitle: Visualize climate change with the help of Plotly
 image: /img/climate_change.png
+published: true
+date: '2020-08-27'
 ---
 
 
