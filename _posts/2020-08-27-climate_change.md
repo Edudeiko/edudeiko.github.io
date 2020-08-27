@@ -3,6 +3,9 @@ title: Climate Change Overview
 subtitle: Visualize climate change with the help of Plotly
 image: /img/climate_change.png
 ---
+You can see how our climate changes over the years with the help of plotly interactive map. By pointing at any country and by sliding over the years you can see how the average temperature changes across the globe.
+Deployed Heroku app can be fund [here](https://climate-change-overview.herokuapp.com)
+Link to GitHub [here](https://github.com/Edudeiko/climate_change)
 
 #### Import libraries first
 ```javascript
@@ -64,13 +67,11 @@ df_2000.head()
 df_2000_by_month = df_2000.groupby(['Date','Country']).sum().reset_index()
 df_2000_by_month.head()
 ```
-##### Visualization
+#### Visualization
 ```
-fig = px.choropleth(df_2000_by_month, locations='Country', locationmode='country names', 
-                    color='Average_Temp_Farenheit', hover_data=['Average_Temp_Celsius'],
-                    hover_name='Country', animation_frame='Date')
+fig = px.choropleth(df_2000_by_month, locations='Country', locationmode='country names', color='Average_Temp_Farenheit', hover_data=['Average_Temp_Celsius'], hover_name='Country', animation_frame='Date')
 
-fig.update_layout(title_text='Average Temperature Change from 2010-01-01 to 2013-01-01', title_x = 0.5, 
-                  geo=dict(showframe = False, showcoastlines = False))
+fig.update_layout(title_text='Average Temperature Change from 2010-01-01 to 2013-01-01', title_x = 0.5, geo=dict(showframe = False, showcoastlines = False))
+
 fig.show()
 ```
