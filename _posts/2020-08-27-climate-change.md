@@ -7,7 +7,7 @@ published: true
 ---
 title: CLIMATE CHANGE OVERVIEW
 subtitle: Visualize climate change with the help of [Plotly](https://plotly.com/python/)
-image: /img/features_importance.png
+image: /img/climate_change.png
 ---
 You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
 
