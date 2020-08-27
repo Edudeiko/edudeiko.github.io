@@ -4,7 +4,7 @@ subtitle: Visualize climate change with the help of Plotly
 image: /img/climate_change.png
 ---
 
-##### Import libraries first
+#### Import libraries first
 ```javascript
 import numpy as np
 import pandas as pd
@@ -14,12 +14,12 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 ```
-##### load the data
+#### load the data
 you can download the original data from [here](http://google.com)
 ```javascript
 df = pd.read_csv('../assets/GlobalLandTemperaturesByCountry.csv')
 ```
-##### Look at the data, find the Null values, clean the data
+#### Look at the data, find the Null values, clean the data
 ```javascript
 print(df.shape)
 df.head()
@@ -32,40 +32,38 @@ df = df.dropna()
 print(df.shape)
 df.head()
 ```
-##### Creating Celsius to Farenheit function
+#### Creating Celsius to Farenheit function
 ```javascript
 def convert_to_farenheit (c):
     return (c*9/5)+32
 ```
-            ##### Round up the result to 2 decimals as well
-            ```
-            df['Average_Temp_Farenheit'] = df['Average_Temp_Celsius'].apply(convert_to_farenheit).round(2)
-            df['Average_Temp_Celsius'] = df['Average_Temp_Celsius'].round(2)
-            ```
-            ##### Group the dataframe by Country name and dataset
-            ```
-            df_sorted = df.groupby(['Country', 'Date']).sum().reset_index().sort_values(['Date'], ascending=False)
-            df_sorted.head()
-            ```
-            ##### Create the data range
-            ```
-            start_date = '2009-12-01'
-            end_date = '2013-01-01'
-            mask = (df_sorted['Date'] > start_date) & (df_sorted['Date'] <= end_date)
-            ```
-            ##### Create a new sorted dataset
-            ```
-            df_2000 = df_sorted[mask]
-            print(df_2000.shape)
-            df_2000.head()
-            ```
-
-            ##### Create a dataset for Climate change by timeline
-
-            ```
-            df_2000_by_month = df_2000.groupby(['Date','Country']).sum().reset_index()
-            df_2000_by_month.head()
-            ```
+#### Round up the result to 2 decimals as well
+```javascript
+df['Average_Temp_Farenheit'] = df['Average_Temp_Celsius'].apply(convert_to_farenheit).round(2)
+df['Average_Temp_Celsius'] = df['Average_Temp_Celsius'].round(2)
+```
+#### Group the dataframe by Country name and dataset
+```javascript
+df_sorted = df.groupby(['Country', 'Date']).sum().reset_index().sort_values(['Date'], ascending=False)
+df_sorted.head()
+```
+#### Create the data range
+```javascript
+start_date = '2009-12-01'
+end_date = '2013-01-01'
+mask = (df_sorted['Date'] > start_date) & (df_sorted['Date'] <= end_date)
+```
+#### Create a new sorted dataset
+```javascript
+df_2000 = df_sorted[mask]
+print(df_2000.shape)
+df_2000.head()
+```
+#### Create a dataset for Climate change by timeline
+```javascript
+df_2000_by_month = df_2000.groupby(['Date','Country']).sum().reset_index()
+df_2000_by_month.head()
+```
             ##### Visualization
             ```
             fig = px.choropleth(df_2000_by_month, locations='Country', locationmode='country names', 
@@ -118,20 +116,3 @@ var foo = function(x) {
 foo(3)
 {% endhighlight %}
 
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
