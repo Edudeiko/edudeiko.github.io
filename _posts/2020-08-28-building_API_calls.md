@@ -19,7 +19,7 @@ While I was working on the project, I couldn’t find desired Spotify API calls.
 All of the results had to be in a nice readable json format for the backend team to use.
 
 ### Register Spotify for Developers account
-Before getting into the code you have to to register an account at [Spotify for Developer](https://developer.spotify.com) and create an app in order to get **Client ID** and **Client Secret** keys. In edit settings add **Redirect URIs**. I added http://127.0.0.1:5000/callback/ and
+Before getting into the code you have to register an account at [Spotify for Developer](https://developer.spotify.com) and create an app in order to get **Client ID** and **Client Secret** keys. In edit settings add **Redirect URIs**. I added http://127.0.0.1:5000/callback/ and
 https://sp-search.herokuapp.com/callback/. 
 
 {: .box-note}
