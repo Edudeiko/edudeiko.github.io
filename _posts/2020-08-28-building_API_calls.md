@@ -2,35 +2,18 @@
 layout: post
 title: Building API
 subtitle: Create easy to use Spotify API 
+image: img/Spotify.jpg
 gh-repo: Edudeiko/dj_helper_search_api
 gh-badge: [star, fork, follow]
 tags: [test]
 comments: true
 ---
 
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+While I was working for one of the projects, I couldn’t find desired Spotify API calls. At that time I needed the following: 1) Search function which will deliver **Artist Name**, **song name**, **song ID**, **external URL** is handy to listen for a whole song, **explicit** has two values True or False, **preview** gives you 30 seconds to listen a song and a cover **image** for the specific song.
 
-**Here is some bold text**
+### Register Spotify for Developers account
+Before getting into the code you need to register an account at [Spotify for Developer](https://developer.spotify.com) and create an app in order to get **Client ID** and **Client Secret** keys. In edit settings add **Redirect URIs**. I added http://127.0.0.1:5000/callback/ and https://sp-search.herokuapp.com/callback/. You need to change it to your own localhost and to the host you will deploy your APIs to.
 
-## Here is a secondary heading
-
-Here's a useless table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-
-How about a yummy crepe?
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-It can also be centered!
-
-![Crepe](https://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg){: .center-block :}
 
 Here's a code chunk:
 
