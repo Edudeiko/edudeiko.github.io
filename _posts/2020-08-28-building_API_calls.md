@@ -13,6 +13,7 @@ All of the results had to be in a nice readable json format for the back end tea
 
 ### Register Spotify for Developers account
 Before getting into the code you need to register an account at [Spotify for Developer](https://developer.spotify.com) and create an app in order to get **Client ID** and **Client Secret** keys. In edit settings add **Redirect URIs**. I added http://127.0.0.1:5000/callback/ and https://sp-search.herokuapp.com/callback/. 
+
 {: .box-note}
 **Note:** You need to change URIs to your own localhost and to the host you will deploy your APIs to.
 
