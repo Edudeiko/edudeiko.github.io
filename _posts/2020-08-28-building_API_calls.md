@@ -12,9 +12,9 @@ While I was working on the project, I couldn’t find desired Spotify API calls.
 
 **1)** Search function which will deliver **Artist Name**, **song name**, **song ID**, **external URL** is handy to listen for a whole song, **explicit** has two values True or False, **preview** gives you 30 seconds to listen a song and a cover **image** for the specific song. 
 
-**2)** All of the above plus the audio features for the searched songs. Audio features contain acousticness, danceability, energy, instrumentalness, key, liveness etc. The audio features you can use to create visualizations and to predict nearest neighbours to the desired songs. 
+**2)** All of the above plus the **audio features** for the searched songs. Audio features contain acousticness, danceability, energy, instrumentalness, key, liveness etc. The audio features can be used to create visualizations and to predict similar songs. 
 
-**3)** I was requested to create a predicting model in order to get the desired amount of similar songs. The model had to use audio features to suggest similar songs.
+**3)** Also I was requested to create a predicting model in order to get the desired amount of similar songs. The model had to use audio features to suggest similar songs.
 
 All of the results had to be in a nice readable json format for the backend team to use.
 
