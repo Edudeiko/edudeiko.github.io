@@ -15,12 +15,13 @@ While I was working on one the project, I couldn’t find desired Spotify API ca
 All of the results had to be in a nice readable json format for the back end team to use.
 
 ### Register Spotify for Developers account
-Before getting into the code you need to register an account at [Spotify for Developer](https://developer.spotify.com) and create an app in order to get **Client ID** and **Client Secret** keys. In edit settings add **Redirect URIs**. I added http://127.0.0.1:5000/callback/ and https://sp-search.herokuapp.com/callback/. 
+Before getting into the code you need to register an account at [Spotify for Developer](https://developer.spotify.com) and create an app in order to get **Client ID** and **Client Secret** keys. In edit settings add **Redirect URIs**. I added http://127.0.0.1:5000/callback/ and
+https://sp-search.herokuapp.com/callback/. 
 
 {: .box-note}
 **Note:** You need to change URIs to your own localhost and to the host you will deploy your APIs to.
 
-And here is the same code with syntax highlighting:
+## To be continued
 
 ```javascript
 var foo = function(x) {
@@ -29,29 +30,3 @@ var foo = function(x) {
 foo(3)
 ```
 
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
-
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
