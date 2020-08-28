@@ -5,7 +5,6 @@ subtitle: Create easy to use Spotify API
 image: img/Spotify.jpg
 gh-repo: Edudeiko/dj_helper_search_api
 gh-badge: [star, fork, follow]
-tags: [test]
 comments: true
 ---
 
