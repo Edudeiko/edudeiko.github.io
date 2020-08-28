@@ -8,7 +8,7 @@ gh-badge: [star, fork, follow]
 comments: true
 ---
 
-While I was working on one the project, I couldn’t find desired Spotify API calls. At that time I was looking for the following: 
+While I was working on the project, I couldn’t find desired Spotify API calls. At that time I was looking for the following: 
 
 **1)** Search function which will deliver **Artist Name**, **song name**, **song ID**, **external URL** is handy to listen for a whole song, **explicit** has two values True or False, **preview** gives you 30 seconds to listen a song and a cover **image** for the specific song. 
 
