@@ -109,10 +109,10 @@ gtag: "<!-- Global site tag (gtag.js) - Google Analytics -->
 </script>"
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-149759947-1"
+# google_analytics: "UA-149759947-1"
 
 # Google Tag Manager ID
-gtm: "UA-149759947-1"
+# gtm: "UA-149759947-1"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
