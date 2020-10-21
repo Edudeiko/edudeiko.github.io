@@ -7,8 +7,17 @@ gh-repo: Edudeiko/CS-Data-Science-Build-Week-1
 ---
 
 Start with building class KNN. It will include Standard Scaler, Euclidean distance, predict and accuracy score for an outcome. 
-First I created a small load dataset function to load data.
-
+**1)** Create the class KNN itself.
+```javascript
+class KNN:
+  '''K-Nearest Neighbour Classifier'''
+  def __init__(self, target_classes):
+    '''Specify a number of target classes'''
+    self.target_classes = target_classes
+```
+**2)** Then I created a small load dataset function to load data.
+{: .box-note}
+**Note:** It takes a list of arrays. You might want to modify it if you'll load it from another source.
 ```javascript
 def load_data(self, filename):
   '''loads array list'''
@@ -17,17 +26,34 @@ def load_data(self, filename):
     dataset.append(row)
   return dataset
 ```
+**3)** Create a step-by-step Standard Scaler function
+#### StandardScaler
+```javascript
+    def fit(self, X):
+        '''scale the data'''
+        self.mean_X = np.mean(X, axis=0)  # compute mean
+        self.scaled_X = np.std(X - self.mean_X, axis=0)  # compute standard deviation
+        return self
 
-**1)** Search function which will deliver **Artist Name**, **song name**, **song ID**, **external URL** is handy to listen for a whole song, **explicit** has two values True or False, **preview** gives you 30 seconds to listen a song and a cover **image** for the specific song. 
+    def transform(self, X):
+        '''transform data'''
+        return (X - self.mean_X) / self.scaled_X
 
-**2)** All of the above plus the **audio features** for the searched songs. Audio features contain acousticness, danceability, energy, instrumentalness, key, liveness etc. The audio features can be used to create visualizations and to predict similar songs. 
+    def fit_transform(self, X):
+        '''fit_transform data'''
+        return self.fit(X).transform(X)
+```
+Shortend version would be
+```javascript
+  def scale(X):
+    X_scaled = X - np.mean(X)  # from dataset substract mean dataset
+    return X_scaled / np.std(X)  # above result devide on standard deviation of the dataset
+```
 
-**3)** Also I was requested to create a predicting model in order to get the desired amount of similar songs. The model had to use audio features to suggest similar songs.
 
-All of the results had to be in a nice readable json format for the backend team to use.
 
-### Register Spotify for Developers account
-Before getting into the code you have to register an account at [Spotify for Developer](https://developer.spotify.com) and create an app in order to get **Client ID** and **Client Secret** keys. In edit settings add **Redirect URIs**. I added http://127.0.0.1:5000/callback/ and
+
+at [Spotify for Developer](https://developer.spotify.com) and create an app in order to get **Client ID** and **Client Secret** keys. In edit settings add **Redirect URIs**. I added http://127.0.0.1:5000/callback/ and
 https://sp-search.herokuapp.com/callback/. 
 
 {: .box-note}
