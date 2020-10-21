@@ -2,7 +2,7 @@
 layout: post
 title: KNN from scratch
 subtitle: KNN step by step guide  
-image: img/KNN.jpg
+image: img/KNN.png
 gh-repo: Edudeiko/CS-Data-Science-Build-Week-1
 ---
 
