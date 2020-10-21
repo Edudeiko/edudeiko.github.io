@@ -116,10 +116,11 @@ def accuracy(self, y_test, y_pred):
     '''print an accuracy score'''
     return f'Accuracy score: {np.mean(y_test==y_pred)}'
 ```
-## Now we can test the KNN model on a dataset.
+## Now we can test created KNN model on a dataset
 
----
+If you’ve been reading for these long here is the whole code from the above.
+
 <script
 src="https://gist.github.com/Edudeiko/abbbcf0e70b8b638191f7acb197924b7.js">
 </script>
----
+
