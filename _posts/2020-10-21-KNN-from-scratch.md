@@ -38,8 +38,8 @@ def load_data(self, filename):
 ```javascript
 def fit(self, X):
     '''scale the data'''
-    self.mean_X = np.mean(X, axis=0)  # compute mean
-    self.scaled_X = np.std(X - self.mean_X, axis=0)  # compute standard deviation
+    self.mean_X = np.mean(X, axis=0)
+    self.scaled_X = np.std(X - self.mean_X, axis=0)
     return self
 
 def transform(self, X):
@@ -60,7 +60,7 @@ def scale(X):
 ```
 
 **4)** fit_ the train data before predict
-```javasript
+```javascript
 def fit_(self, X, y_train):
     '''fit train data before predict'''
     self.X_train = X
@@ -78,7 +78,8 @@ def euclidean_distance(self, row1, row2):
 You can print out the results of the Euclidean distance to look at the results.
 
 ```javascript
-row0 = dataset[0]  # you can compare any row in the dataset
+'''you can compare any row in the dataset'''
+row0 = dataset[0]
 for row in dataset:
     distance = euclidean_distance(row0, row)
     print(distance)
@@ -91,16 +92,16 @@ def predict(self, X_test):
     '''predict the distance of KNN'''
     y = np.zeros(len(X_test))
 
-    # iterate through the test set
+    '''iterate through the test set'''
     for ii in range(len(X_test)):
 
-        # distance between test indices and all of the training set indices
+        '''distance between test indices and all of the training set indices'''
         distance = np.array([self.euclidean_distance(X_test[ii], x_ind) for x_ind in self.X_train])
 
-        # sort index from ascending to descending order of target classes
+        '''sort index from ascending to descending order of target classes'''
         distance_sorted = distance.argsort()[:self.target_classes]
 
-        # for each neighbor find the target_class
+        '''for each neighbor find the target_class'''
         nearest_label = [self.y_train[ii] for ii in distance_sorted]
 
         y[ii] = max(set(nearest_label), key = nearest_label.count)
