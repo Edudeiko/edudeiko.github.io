@@ -125,7 +125,7 @@ src="https://gist.github.com/Edudeiko/abbbcf0e70b8b638191f7acb197924b7.js">
 
 ## Now we can test created KNN model on a dataset
 
-I decided to go with the breast cancer dataset
+I decided to use a breast cancer dataset.
 
 <script 
 src="https://gist.github.com/Edudeiko/0da50c3878fc510661d08124755e11dd.js">
