@@ -60,6 +60,7 @@ def scale(X):
 ```
 
 **4)** fit_ the train data before predict
+
 ```javascript
 def fit_(self, X, y_train):
     '''fit train data before predict'''
@@ -116,7 +117,8 @@ def accuracy(self, y_test, y_pred):
     '''print an accuracy score'''
     return f'Accuracy score: {np.mean(y_test==y_pred)}'
 ```
-
+---
 <script
 src="https://gist.github.com/Edudeiko/abbbcf0e70b8b638191f7acb197924b7">
 </script>
+---
