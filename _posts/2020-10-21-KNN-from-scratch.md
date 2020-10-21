@@ -51,12 +51,12 @@ def fit_transform(self, X):
     return self.fit(X).transform(X)
 ```
 
-Shortend version:
+Shortend version. From dataset substract mean dataset, devide the result on standard deviation of the dataset
 
 ```javascript
 def scale(X):
-    X_scaled = X - np.mean(X)  # from dataset substract mean dataset
-    return X_scaled / np.std(X)  # above result devide on standard deviation of the dataset
+    X_scaled = X - np.mean(X)
+    return X_scaled / np.std(X)
 ```
 
 **4)** fit_ the train data before predict
