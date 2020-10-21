@@ -109,7 +109,8 @@ def predict(self, X_test):
 ```
 
 **7)** Perform an accuracy score.
-```
+
+```javascript
 def accuracy(self, y_test, y_pred):
     '''print an accuracy score'''
     return f'Accuracy score: {np.mean(y_test==y_pred)}'
