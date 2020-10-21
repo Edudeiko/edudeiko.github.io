@@ -1,12 +1,11 @@
 ---
 layout: post
 title: KNN from scratch
-subtitle: KNN step by step guide  
+subtitle: KNN a step by step guide  
 image: img/KNN.png
-gh-repo: Edudeiko/CS-Data-Science-Build-Week-1
 ---
 
-Start with building class KNN. It will include Standard Scaler, Euclidean distance, predict and accuracy score for an outcome. You can find the code and some extra [on my GitHub page](https://github.com/Edudeiko/CS-Data-Science-Build-Week-1)
+Start by building class **KNN**. It will include **Standard Scaler**, **Euclidean distance**, **predict** and **accuracy score** for an outcome. You can find the code and some extra [on my GitHub page](https://github.com/Edudeiko/CS-Data-Science-Build-Week-1)
 
 **1)** Create the class KNN. I will use target_classes to specify the number of classes.
 
@@ -79,14 +78,14 @@ def euclidean_distance(self, row1, row2):
 You can print out the results of the Euclidean distance to look at the results.
 
 ```javascript
-'''you can compare any row in the dataset'''
 row0 = dataset[0]
+'''you can compare any row in the dataset'''
 for row in dataset:
     distance = euclidean_distance(row0, row)
     print(distance)
 ```
 
-**6)** Predict function. We iterate through the test data to get the distance between test indices and all of the training data indices. Sort the result from ascending to descending order of target classes. Then for each neighbor find the target class.
+**6)** Predict function. We iterate through the test data to get the distance between test indices and all of the training data. Sort the result from ascending to descending order of target classes. Then for each neighbor find the target class.
 
 ```javascript
 def predict(self, X_test):
@@ -117,8 +116,10 @@ def accuracy(self, y_test, y_pred):
     '''print an accuracy score'''
     return f'Accuracy score: {np.mean(y_test==y_pred)}'
 ```
+## Now we can test the KNN model on a dataset.
+
 ---
 <script
-src="https://gist.github.com/Edudeiko/abbbcf0e70b8b638191f7acb197924b7">
+src="https://gist.github.com/Edudeiko/abbbcf0e70b8b638191f7acb197924b7.js">
 </script>
 ---
