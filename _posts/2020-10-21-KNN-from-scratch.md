@@ -1,9 +1,10 @@
 ---
 layout: post
-title: KNN from scratch
+title: K-Nearest Neighbors algorithm from scratch
 subtitle: KNN a step by step guide  
 image: img/KNN.png
 ---
+**KNN** can be used for both classification and regression predictive poblems. Mostly it’s more used in classification problems.
 
 Start by building class **KNN**. It will include **Standard Scaler**, **Euclidean distance**, **predict** and **accuracy score** for an outcome. You can find the code and some extra [on my GitHub page](https://github.com/Edudeiko/CS-Data-Science-Build-Week-1)
 
@@ -16,7 +17,7 @@ class KNN:
       '''Specify a number of target classes'''
       self.target_classes = target_classes
 ```
-**2)** Then I created a small load dataset function to load data.
+**2)** Then I created a load dataset function to load data
 
 {: .box-note}
 **Note:** It takes a list of arrays. You might want to modify it if you'll load it from another source.
@@ -85,7 +86,7 @@ for row in dataset:
     print(distance)
 ```
 
-**6)** Predict function. We iterate through the test data to get the distance between test indices and all of the training data. Sort the result from ascending to descending order of target classes. Then for each neighbor find the target class.
+**6)** Predict function. We iterate through the test data and each row of training data to calculate the distance between them. I used the Euclidean distance as a distance metric. You can explore the other metrics. Sort the result from in ascending order based on distance values. For each neighbor find the target class. 
 
 ```javascript
 def predict(self, X_test):
