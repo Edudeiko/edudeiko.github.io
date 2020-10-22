@@ -124,9 +124,68 @@ If you’ve been reading for these long here is the whole code from the above.
 src="https://gist.github.com/Edudeiko/abbbcf0e70b8b638191f7acb197924b7.js">
 </script>
 
-## Now we can test created KNN model on a dataset
+## Now we can test created KNN algorithm on a breast cancer dataset
 
-I decided to use a breast cancer dataset.
+#### Features are computed from a digitized image of a fine needle aspirate of a breast mass. They describe characteristics of the cell nuclei present in the image.
+
+a) radius (mean of distances from center to points on the perimeter)
+
+b) texture (standard deviation of gray-scale values) 
+
+c) perimeter 
+
+d) area 
+
+e) smoothness (local variation in radius lengths) 
+
+f) compactness (perimeter^2 / area - 1.0) 
+
+g) concavity (severity of concave portions of the contour)
+
+h) concave points (number of concave portions of the contour) 
+
+i) symmetry 
+
+j) fractal dimension ("coastline approximation" - 1)
+
+**The mean, standard error and "worst" or largest (mean of the three largest values) of these features were computed for each image, resulting in 30 features:**
+
+- 1 - mean radius
+- 2 - mean texture
+- 3 - mean perimeter
+- 4 - mean area
+- 5 - mean smoothness
+- 6 - mean compactness
+- 7 - mean concavity
+- 8 - mean concave points
+- 9 - mean symmetry
+- 10 - mean fractal dimension
+- 11 - radius error
+- 12 - texture error
+- 13 - perimeter error
+- 14 - area error
+- 15 - smoothness error
+- 16 - compactness error
+- 17 - concavity error
+- 18 - concave points error
+- 19 - symmetry error
+- 20 - fractal dimension error
+- 21 - worst radius
+- 22 - worst texture
+- 23 - worst perimeter
+- 24 - worst area
+- 25 - worst smoothness
+- 26 - worst compactness
+- 27 - worst concavity
+- 28 - worst concave points
+- 29 - worst symmetry
+- 30 - worst fractal dimension 
+
+#### the diagnosis of breast tissues
+**2 classes:**
+- malignant
+- benign
+
 
 <script 
 src="https://gist.github.com/Edudeiko/0da50c3878fc510661d08124755e11dd.js">
