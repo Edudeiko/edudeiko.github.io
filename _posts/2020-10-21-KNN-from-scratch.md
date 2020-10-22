@@ -194,4 +194,10 @@ src="https://gist.github.com/Edudeiko/0da50c3878fc510661d08124755e11dd.js">
 ---
 I had an accuracy score of **0.976**
 
+##### Classification report
+
+<img src="https://i.ibb.co/DC9Xj6M/classification-report-KNN.png" alt="classification-report-KNN" border="0">
+
+##### Confusion matrix
+
 <img src="https://i.ibb.co/2SmNFrm/confusion-matrix-KNN.png" alt="confusion-matrix-KNN" border="0">
