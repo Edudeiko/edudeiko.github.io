@@ -10,7 +10,7 @@ Start by building class **KNN**. It will include **Standard Scaler**, **Euclidea
 
 **1)** Create the class KNN. I will use target_classes to specify the number of classes.
 
-```pythonscript
+```python
 class KNN:
     '''K-Nearest Neighbour Classifier'''
     def __init__(self, target_classes):
@@ -22,7 +22,7 @@ class KNN:
 {: .box-note}
 **Note:** It takes a list of arrays. You might want to modify it if you'll load it from another source.
 
-```javascript
+```python
 def load_data(self, filename):
     '''loads array list'''
     dataset = list()
@@ -35,7 +35,7 @@ def load_data(self, filename):
 
 #### StandardScaler
 
-```javascript
+```python
 def fit(self, X):
     '''scale the data'''
     self.mean_X = np.mean(X, axis=0)
@@ -53,7 +53,7 @@ def fit_transform(self, X):
 
 Shortend version. From dataset substract mean dataset, devide the result on standard deviation of the dataset
 
-```javascript
+```python
 def scale(X):
     X_scaled = X - np.mean(X)
     return X_scaled / np.std(X)
@@ -61,7 +61,7 @@ def scale(X):
 
 **4)** fit_ the train data before predict
 
-```javascript
+```python
 def fit_(self, X, y_train):
     '''fit train data before predict'''
     self.X_train = X
@@ -70,7 +70,7 @@ def fit_(self, X, y_train):
 
 **5)** Create Euclidean distance function = sqrt(sum i to N (x1_i – x2_i)^2)
 
-```javascript
+```python
 def euclidean_distance(self, row1, row2):
     '''Euclidian distance'''
     return np.sqrt(np.sum((row1 - row2) ** 2))
@@ -78,7 +78,7 @@ def euclidean_distance(self, row1, row2):
 
 You can print out the results of the Euclidean distance to look at the results.
 
-```javascript
+```python
 row0 = dataset[0]
 '''you can compare any row in the dataset'''
 for row in dataset:
@@ -88,7 +88,7 @@ for row in dataset:
 
 **6)** Predict function. We iterate through the test data and each row of training data to calculate the distance between them. I used the Euclidean distance as a distance metric. You can explore the other metrics. Sort the result from in ascending order based on distance values. For each neighbor find the target class. 
 
-```javascript
+```python
 def predict(self, X_test):
     '''predict the distance of KNN'''
     y = np.zeros(len(X_test))
@@ -112,7 +112,7 @@ def predict(self, X_test):
 
 **7)** Perform an accuracy score.
 
-```javascript
+```python
 def accuracy(self, y_test, y_pred):
     '''print an accuracy score'''
     return f'Accuracy score: {np.mean(y_test==y_pred)}'
