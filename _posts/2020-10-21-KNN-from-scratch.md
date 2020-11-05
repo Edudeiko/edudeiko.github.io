@@ -10,7 +10,7 @@ Start by building class **KNN**. It will include **Standard Scaler**, **Euclidea
 
 **1)** Create the class KNN. I will use target_classes to specify the number of classes.
 
-```javascript
+```pythonscript
 class KNN:
     '''K-Nearest Neighbour Classifier'''
     def __init__(self, target_classes):
