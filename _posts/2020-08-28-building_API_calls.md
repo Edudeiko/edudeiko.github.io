@@ -25,7 +25,8 @@ https://sp-search.herokuapp.com/callback/.
 {: .box-note}
 **Note:** You need to change URIs to your own localhost and to the host you will deploy your APIs to.
 
-At the end of the task I've created 3 API. [First](https://sp-search.herokuapp.com/track_search_ready/test) API will search for a track, [second](https://sp-search.herokuapp.com/audio_features/in-to-the-sun) will search for a track and provide 10 tracks along with audio features, [third](https://sp-search.herokuapp.com/predict/4R2kfaDFhslZEMJqAFNpdd) will give 4 the most related songs to the desired one depending on the audio features using K-Nearest Neighbor. I used Heroku to share the API with the backend team.
+By the end of the project I created 3 API. [First](https://sp-search.herokuapp.com/track_search_ready/test) API searches for a track, [second](https://sp-search.herokuapp.com/audio_features/in-to-the-sun) searches for a track and provides 10 tracks along with audio features, [third](https://sp-search.herokuapp.com/predict/4R2kfaDFhslZEMJqAFNpdd) gives 4 the most related songs to the desired one depending on the audio features using K-Nearest Neighbor. I used Heroku to deploy the API then shared it with the backend team.
+
 ## To be continued
 
 ```javascript
