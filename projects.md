@@ -10,7 +10,7 @@ subtitle: Featured Work in AI, Data Science & Full-Stack Development
 
 Built a comprehensive lead assignment platform that automates the distribution and tracking of leads across sales teams. The system features intelligent routing algorithms, real-time dashboard analytics, and workflow automation.
 
-- **Tech Stack:** Python, React, Node.js, PostgreSQL, RESTful APIs
+- **Tech Stack:** Python, JavaScript, FastAPI, MS SQL Server, RESTful APIs
 - **Key Features:** Automated lead routing, real-time analytics, custom business rules engine
 - **Impact:** Streamlined lead distribution process, improved response times, enhanced team productivity
 
@@ -22,7 +22,7 @@ Built a comprehensive lead assignment platform that automates the distribution a
 
 Developed production-ready RAG (Retrieval-Augmented Generation) systems and SQL AI agents that enable natural language interaction with databases and document repositories.
 
-- **Tech Stack:** Python, LangChain, Vector Databases, OpenAI API, PostgreSQL
+- **Tech Stack:** Python, FastAPI, LangChain, LangGraph, Vector Databases, OpenAI API, MS SQL Server
 - **Key Features:** Semantic search, natural language to SQL translation, context-aware responses
 - **Impact:** Enabled non-technical users to query complex databases, improved information accessibility
 - **Techniques:** Embeddings, vector similarity search, prompt engineering
