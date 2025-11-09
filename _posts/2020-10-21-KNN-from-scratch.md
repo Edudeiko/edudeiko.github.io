@@ -1,37 +1,37 @@
 ---
 layout: post
 title: K-Nearest Neighbors algorithm from scratch
-subtitle: KNN a step by step guide  
+subtitle: KNN a step by step guide
 image: img/KNN.png
 ---
-**KNN** can be used for both classification and regression predictive problems. However, it's more commonly used for classification.
+**K-Nearest Neighbors (KNN)** is one of the simplest yet most effective machine learning algorithms. It works on the intuition that similar data points tend to have similar labels. While it can be used for both classification and regression tasks, it's most commonly applied to classification problems.
 
-Start by building class **KNN**. It will include **Standard Scaler**, **Euclidean distance**, **predict** and **accuracy score** for an outcome. You can find the code and some extra [on my GitHub page](https://github.com/Edudeiko/CS-Data-Science-Build-Week-1)
+In this tutorial, we'll build a KNN classifier from scratch to understand how it works under the hood. Our implementation will include **Standard Scaler** for feature normalization, **Euclidean distance** calculation, **predict** function for making predictions, and **accuracy score** for evaluation.
 
-**1)** Create the class KNN. I will use target_classes to specify the number of classes.
+You can find the complete code and additional examples [on my GitHub page](https://github.com/Edudeiko/CS-Data-Science-Build-Week-1)
+
+## Building the KNN Class
+
+Start by building class **KNN** with the following components:
+
+**1)** Create the class KNN. The parameter `k` specifies how many nearest neighbors to consider when making predictions.
+
+The choice of `k` is crucial:
+- **Small k** (e.g., k=1): More sensitive to noise, can lead to overfitting
+- **Large k**: Smoother decision boundaries, but may underfit
+- **Rule of thumb**: Start with k = sqrt(n) where n is the number of training samples, and use cross-validation to find the optimal value
 
 ```python
 class KNN:
     '''K-Nearest Neighbour Classifier'''
-    def __init__(self, target_classes):
-      '''Specify a number of target classes'''
-      self.target_classes = target_classes
-```
-**2)** Next, I created a function to load the dataset
-
-{: .box-note}
-**Note:** It takes a list of arrays. You might want to modify it if you'll load it from another source.
-
-```python
-def load_data(self, filename):
-    '''loads array list'''
-    dataset = list()
-    for row in filename:
-      dataset.append(row)
-    return dataset
+    def __init__(self, k):
+      '''Specify the number of neighbors (k) to consider'''
+      self.k = k
 ```
 
-**3)** Create a step-by-step Standard Scaler function
+**2)** Create a step-by-step Standard Scaler function
+
+Before calculating distances between data points, we need to scale our features. KNN is sensitive to the scale of features, so standardization ensures all features contribute equally to distance calculations.
 
 #### StandardScaler
 
@@ -51,24 +51,26 @@ def fit_transform(self, X):
     return self.fit(X).transform(X)
 ```
 
-Shortened version: Subtract the mean from the dataset, then divide by the standard deviation
+**Alternative simplified version:** If you don't need separate fit/transform steps (i.e., you're scaling all your data at once), you can use this condensed function. Note that `axis=0` ensures it scales each feature column independently.
 
 ```python
 def scale(X):
-    X_scaled = X - np.mean(X)
-    return X_scaled / np.std(X)
+    X_scaled = X - np.mean(X, axis=0)
+    return X_scaled / np.std(X, axis=0)
 ```
 
-**4)** Fit the training data before making predictions
+**3)** Fit the training data before making predictions
+
+Now we need to store the training data so we can compare test samples against it.
 
 ```python
-def fit_(self, X, y_train):
+def fit(self, X, y_train):
     '''fit train data before predict'''
     self.X_train = X
     self.y_train = y_train
 ```
 
-**5)** Create Euclidean distance function = sqrt(sum i to N (x1_i – x2_i)^2)
+**4)** Create Euclidean distance function = sqrt(sum i to N (x1_i – x2_i)^2)
 
 ```python
 def euclidean_distance(self, row1, row2):
@@ -86,7 +88,7 @@ for row in dataset:
     print(distance)
 ```
 
-**6)** Predict function. We iterate through the test data and each row of training data to calculate the distance between them. I used the Euclidean distance as a distance metric. You can explore the other metrics. Sort the result from in ascending order based on distance values. For each neighbor find the target class. 
+**5)** Create the predict function. Iterate through the test data and each row of training data to calculate the distance between them. Use Euclidean distance as the distance metric (you can explore other metrics). Sort the results in ascending order based on distance values. For each neighbor, find the target class. 
 
 ```python
 def predict(self, X_test):
@@ -99,18 +101,18 @@ def predict(self, X_test):
         '''distance between test indices and all of the training set indices'''
         distance = np.array([self.euclidean_distance(X_test[ii], x_ind) for x_ind in self.X_train])
 
-        '''sort index from ascending to descending order of target classes'''
-        distance_sorted = distance.argsort()[:self.target_classes]
+        '''sort indices in ascending order and select k nearest neighbors'''
+        distance_sorted = distance.argsort()[:self.k]
 
         '''for each neighbor find the target_class'''
-        nearest_label = [self.y_train[ii] for ii in distance_sorted]
+        nearest_label = [self.y_train[idx] for idx in distance_sorted]
 
         y[ii] = max(set(nearest_label), key = nearest_label.count)
 
     return y
 ```
 
-**7)** Perform an accuracy score.
+**6)** Perform an accuracy score.
 
 ```python
 def accuracy(self, y_test, y_pred):
@@ -124,7 +126,9 @@ If you've read this far, here's the complete code from above:
 src="https://gist.github.com/Edudeiko/abbbcf0e70b8b638191f7acb197924b7.js">
 </script>
 
-## Now we can test created KNN algorithm on a breast cancer dataset
+## Testing the KNN Algorithm
+
+Now that we've built our KNN classifier from scratch, let's test it on a real-world dataset. We'll use the breast cancer dataset, which is a binary classification problem to predict whether a tumor is malignant or benign based on various features.
 
 #### Features are computed from a digitized image of a fine needle aspirate of a breast mass. They describe characteristics of the cell nuclei present in the image.
 
