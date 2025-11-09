@@ -3,7 +3,7 @@ title: Climate Change Overview
 subtitle: Visualize climate change with the help of Plotly
 image: /img/climate_change.png
 ---
-You can see how climate changes over the years with the help of plotly interactive map. By pointing at any country and by sliding over the years you can see how the average temperature changes across the globe.
+You can explore how climate has changed over the years using this interactive Plotly map. By hovering over any country and moving through the timeline, you can see how average temperatures have changed across the globe.
 Deployed Heroku app can be found [here](https://climate-change-overview.herokuapp.com)
 Link to GitHub [here](https://github.com/Edudeiko/climate_change)
 
@@ -35,14 +35,14 @@ df = df.dropna()
 print(df.shape)
 df.head()
 ```
-#### Creating Celsius to Farenheit function
+#### Creating Celsius to Fahrenheit function
 ```javascript
-def convert_to_farenheit (c):
+def convert_to_fahrenheit(c):
     return (c*9/5)+32
 ```
 #### Round up the result to 2 decimals as well
 ```javascript
-df['Average_Temp_Farenheit'] = df['Average_Temp_Celsius'].apply(convert_to_farenheit).round(2)
+df['Average_Temp_Fahrenheit'] = df['Average_Temp_Celsius'].apply(convert_to_fahrenheit).round(2)
 df['Average_Temp_Celsius'] = df['Average_Temp_Celsius'].round(2)
 ```
 #### Group the dataframe by Country name and dataset
@@ -69,7 +69,7 @@ df_2000_by_month.head()
 ```
 #### Visualization
 ```
-fig = px.choropleth(df_2000_by_month, locations='Country', locationmode='country names', color='Average_Temp_Farenheit', hover_data=['Average_Temp_Celsius'], hover_name='Country', animation_frame='Date')
+fig = px.choropleth(df_2000_by_month, locations='Country', locationmode='country names', color='Average_Temp_Fahrenheit', hover_data=['Average_Temp_Celsius'], hover_name='Country', animation_frame='Date')
 
 fig.update_layout(title_text='Average Temperature Change from 2010-01-01 to 2013-01-01', title_x = 0.5, geo=dict(showframe = False, showcoastlines = False))
 
