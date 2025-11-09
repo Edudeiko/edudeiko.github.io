@@ -1,10 +1,11 @@
 ---
 layout: post
 title: Building an API
-subtitle: Create an easy-to-use Spotify API 
+subtitle: Create an easy-to-use Spotify API
 image: img/Spotify.jpg
 gh-repo: Edudeiko/dj_helper_search_api
 gh-badge: [star, fork, follow]
+tags: [API, Flask, Machine Learning, Python, KNN, Spotify, Heroku]
 comments: true
 ---
 

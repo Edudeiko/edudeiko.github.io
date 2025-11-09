@@ -3,6 +3,7 @@ layout: post
 title: K-Nearest Neighbors algorithm from scratch
 subtitle: KNN a step by step guide
 image: img/KNN.png
+tags: [Machine Learning, KNN, Python, NumPy, Algorithm, Tutorial, Classification]
 ---
 **K-Nearest Neighbors (KNN)** is one of the simplest yet most effective machine learning algorithms. It works on the intuition that similar data points tend to have similar labels. While it can be used for both classification and regression tasks, it's most commonly applied to classification problems.
 

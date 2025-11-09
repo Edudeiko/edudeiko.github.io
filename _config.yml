@@ -1,10 +1,10 @@
 # --- General options --- #
 
 # Name of website
-title: E.D.
+title: Ed Dudeiko
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+description: Data Scientist | AI Engineer | Full-Stack Developer | Miami, FL
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -20,11 +20,11 @@ description: A virtual proof that I'm awesome
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-  Author's home: "https://github.com/Edudeiko"
+  About: "aboutme"
+  Projects: "projects"
+  Blog: "index"
+  GitHub: "https://github.com/Edudeiko"
+  LinkedIn: "https://www.linkedin.com/in/ed-dudeiko"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -60,7 +60,7 @@ footer-link-col: "#404040"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: E. D.
+  name: Ed Dudeiko
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
@@ -71,7 +71,7 @@ social-network-links:
   email: "evgeniy.dudeyko@gmail.com"
 #  facebook: deanattali
   github: "Edudeiko"
-  twitter: "Evgenii51216603"
+#  twitter: "Evgenii51216603"
 #  reddit: yourname
   linkedin: "ed-dudeiko"
 #  xing: yourname
