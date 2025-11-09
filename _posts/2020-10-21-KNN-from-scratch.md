@@ -4,7 +4,7 @@ title: K-Nearest Neighbors algorithm from scratch
 subtitle: KNN a step by step guide  
 image: img/KNN.png
 ---
-**KNN** can be used for both classification and regression predictive poblems. Mostly it’s more used in classification problems.
+**KNN** can be used for both classification and regression predictive problems. However, it's more commonly used for classification.
 
 Start by building class **KNN**. It will include **Standard Scaler**, **Euclidean distance**, **predict** and **accuracy score** for an outcome. You can find the code and some extra [on my GitHub page](https://github.com/Edudeiko/CS-Data-Science-Build-Week-1)
 
@@ -17,7 +17,7 @@ class KNN:
       '''Specify a number of target classes'''
       self.target_classes = target_classes
 ```
-**2)** Then I created a load dataset function to load data
+**2)** Next, I created a function to load the dataset
 
 {: .box-note}
 **Note:** It takes a list of arrays. You might want to modify it if you'll load it from another source.
@@ -51,7 +51,7 @@ def fit_transform(self, X):
     return self.fit(X).transform(X)
 ```
 
-Shortend version. From dataset substract mean dataset, devide the result on standard deviation of the dataset
+Shortened version: Subtract the mean from the dataset, then divide by the standard deviation
 
 ```python
 def scale(X):
@@ -59,7 +59,7 @@ def scale(X):
     return X_scaled / np.std(X)
 ```
 
-**4)** fit_ the train data before predict
+**4)** Fit the training data before making predictions
 
 ```python
 def fit_(self, X, y_train):
@@ -118,7 +118,7 @@ def accuracy(self, y_test, y_pred):
     return f'Accuracy score: {np.mean(y_test==y_pred)}'
 ```
 
-If you’ve been reading for these long here is the whole code from the above.
+If you've read this far, here's the complete code from above:
 
 <script
 src="https://gist.github.com/Edudeiko/abbbcf0e70b8b638191f7acb197924b7.js">
