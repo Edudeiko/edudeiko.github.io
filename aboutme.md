@@ -33,9 +33,9 @@ I'm passionate about transforming data into actionable insights and building sca
 **Tools & Platforms:**
 - Git/GitHub
 - Docker
-- Heroku, AWS
+- Azure Infrastructure
 - Jupyter Notebooks
-- PostgreSQL, MongoDB
+- PostgreSQL, MS SQL Server, MongoDB
 
 ## Key Projects
 
@@ -76,11 +76,3 @@ When I'm not coding or training models:
 - **Family Time:** Quality time with loved ones
 - **Continuous Learning:** Always exploring new AI technologies and frameworks
 - **Open Source:** Contributing to and learning from the community
-
-## Let's Connect
-
-Feel free to reach out if you'd like to discuss opportunities, collaborate on projects, or just talk about data science and AI!
-
-- **Email:** evgeniy.dudeyko@gmail.com
-- **GitHub:** [github.com/Edudeiko](https://github.com/Edudeiko)
-- **LinkedIn:** [linkedin.com/in/ed-dudeiko](https://www.linkedin.com/in/ed-dudeiko)
