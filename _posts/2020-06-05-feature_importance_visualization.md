@@ -2,6 +2,7 @@
 title: Feature Importance Visualization Using Heart Disease Dataset
 subtitle: Create Models To Predict A Heart Disease
 image: /img/features_importance.png
+tags: [Machine Learning, Classification, Feature Engineering, Python, Healthcare, XGBoost]
 ---
 
 I explored feature importance visualization using the heart disease dataset, which you can find [here](https://www.kaggle.com/ronitf/heart-disease-uci).

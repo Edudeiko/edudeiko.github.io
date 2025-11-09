@@ -2,6 +2,7 @@
 title: Climate Change Overview
 subtitle: Visualize climate change with the help of Plotly
 image: /img/climate_change.png
+tags: [Data Visualization, Plotly, Python, Climate Data, Pandas]
 ---
 You can explore how climate has changed over the years using this interactive Plotly map. By hovering over any country and moving through the timeline, you can see how average temperatures have changed across the globe.
 Deployed Heroku app can be found [here](https://climate-change-overview.herokuapp.com)

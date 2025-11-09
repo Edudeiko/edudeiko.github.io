@@ -1,8 +1,9 @@
 ---
 layout: post
 title: K-Nearest Neighbors algorithm from scratch
-subtitle: KNN a step by step guide  
+subtitle: KNN a step by step guide
 image: img/KNN.png
+tags: [Machine Learning, KNN, Python, NumPy, Algorithm, Tutorial, Classification]
 ---
 **KNN** can be used for both classification and regression predictive problems. However, it's more commonly used for classification.
 
