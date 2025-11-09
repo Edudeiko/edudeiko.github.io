@@ -1,0 +1,363 @@
+/**
+ * Modern CSS Enhancements
+ * Adds modern features while maintaining compatibility with existing Beautiful Jekyll theme
+ */
+
+/* ========================================================================
+   CSS Custom Properties (Variables)
+   ======================================================================== */
+
+:root {
+  /* Color palette - matches existing theme */
+  --color-primary: #008AFF;
+  --color-primary-hover: #0085A1;
+  --color-text: #404040;
+  --color-text-muted: #808080;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F5F5F5;
+  --color-border: #EAEAEA;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Typography */
+  --font-primary: 'Lora', 'Times New Roman', serif;
+  --font-secondary: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-base: 18px;
+  --line-height-base: 1.5;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+  /* Border radius */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 10px;
+  --radius-full: 50%;
+}
+
+/* ========================================================================
+   Modern Focus Styles - Accessibility
+   ======================================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remove outline for mouse users, keep for keyboard users */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ========================================================================
+   Smooth Scrolling
+   ======================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Disable for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================================================
+   Modern Image Handling
+   ======================================================================== */
+
+img {
+  /* Better image rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Modern aspect ratio (for future use) */
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* ========================================================================
+   Dark Mode Support (respects user preference)
+   ======================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #e0e0e0;
+    --color-text-muted: #a0a0a0;
+    --color-bg: #1a1a1a;
+    --color-bg-alt: #2a2a2a;
+    --color-border: #3a3a3a;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  .navbar-custom {
+    background-color: var(--color-bg-alt);
+    border-bottom-color: var(--color-border);
+  }
+
+  footer {
+    background-color: var(--color-bg-alt);
+    border-top-color: var(--color-border);
+  }
+
+  .post-preview {
+    border-bottom-color: var(--color-border);
+  }
+
+  /* Adjust image brightness in dark mode */
+  img:not(.avatar-img) {
+    opacity: 0.9;
+  }
+
+  img:not(.avatar-img):hover {
+    opacity: 1;
+  }
+
+  /* Better contrast for code blocks in dark mode */
+  pre,
+  code {
+    background-color: var(--color-bg-alt);
+    border-color: var(--color-border);
+  }
+}
+
+/* ========================================================================
+   Performance Optimizations
+   ======================================================================== */
+
+/* Use GPU acceleration for transforms */
+.navbar-custom,
+.post-image,
+.avatar-img {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ========================================================================
+   Modern Flexbox Utilities
+   ======================================================================== */
+
+.flex-container {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================================================
+   Skip to Main Content (Accessibility)
+   ======================================================================== */
+
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* ========================================================================
+   Better Print Styles
+   ======================================================================== */
+
+@media print {
+  /* Hide non-essential elements */
+  .navbar-custom,
+  footer,
+  .social-share,
+  .disqus-comments,
+  #header-gh-btns {
+    display: none !important;
+  }
+
+  /* Optimize for print */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+
+  /* Show URLs for links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+
+  /* Prevent page breaks inside elements */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+}
+
+/* ========================================================================
+   Container Queries (Future-proof - for modern browsers)
+   ======================================================================== */
+
+@supports (container-type: inline-size) {
+  .post-preview {
+    container-type: inline-size;
+  }
+
+  @container (min-width: 768px) {
+    .post-image {
+      width: 192px;
+      height: 192px;
+    }
+  }
+}
+
+/* ========================================================================
+   Loading State Optimization
+   ======================================================================== */
+
+/* Prevent flash of unstyled content */
+html:not(.fonts-loaded) body {
+  opacity: 0;
+}
+
+html.fonts-loaded body {
+  opacity: 1;
+  transition: opacity var(--transition-base);
+}
+
+/* ========================================================================
+   High Contrast Mode Support (Accessibility)
+   ======================================================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: #0066CC;
+    --color-text: #000000;
+    --color-bg: #FFFFFF;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  button,
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* ========================================================================
+   Modern Scroll Enhancements
+   ======================================================================== */
+
+/* Better scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text);
+}
+
+/* ========================================================================
+   Utility Classes
+   ======================================================================== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.no-select {
+  user-select: none;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
