@@ -12,7 +12,12 @@ You can find the complete code and additional examples [on my GitHub page](https
 
 ## Building the KNN Class
 
-Start by building class **KNN** with the following components:
+Start by building class **KNN** with the following components. First, import the necessary libraries:
+
+```python
+import numpy as np
+from typing import Optional
+```
 
 **1)** Create the class KNN. The parameter `k` specifies how many nearest neighbors to consider when making predictions.
 
@@ -23,10 +28,17 @@ The choice of `k` is crucial:
 
 ```python
 class KNN:
-    '''K-Nearest Neighbour Classifier'''
-    def __init__(self, k):
-      '''Specify the number of neighbors (k) to consider'''
-      self.k = k
+    """K-Nearest Neighbors Classifier.
+
+    Parameters:
+        k (int): Number of nearest neighbors to consider for classification.
+    """
+
+    def __init__(self, k: int = 5):
+        """Initialize KNN classifier with k neighbors."""
+        self.k = k
+        self.X_train: Optional[np.ndarray] = None
+        self.y_train: Optional[np.ndarray] = None
 ```
 
 **2)** Create a step-by-step Standard Scaler function
@@ -64,17 +76,34 @@ def scale(X):
 Now we need to store the training data so we can compare test samples against it.
 
 ```python
-def fit(self, X, y_train):
-    '''fit train data before predict'''
+def fit(self, X: np.ndarray, y: np.ndarray) -> 'KNN':
+    """Store training data.
+
+    Args:
+        X: Training features of shape (n_samples, n_features).
+        y: Training labels of shape (n_samples,).
+
+    Returns:
+        self: The fitted classifier.
+    """
     self.X_train = X
-    self.y_train = y_train
+    self.y_train = y
+    return self
 ```
 
 **4)** Create Euclidean distance function = sqrt(sum i to N (x1_i – x2_i)^2)
 
 ```python
-def euclidean_distance(self, row1, row2):
-    '''Euclidian distance'''
+def euclidean_distance(self, row1: np.ndarray, row2: np.ndarray) -> float:
+    """Calculate Euclidean distance between two points.
+
+    Args:
+        row1: First data point.
+        row2: Second data point.
+
+    Returns:
+        float: Euclidean distance.
+    """
     return np.sqrt(np.sum((row1 - row2) ** 2))
 ```
 
@@ -88,36 +117,53 @@ for row in dataset:
     print(distance)
 ```
 
-**5)** Create the predict function. Iterate through the test data and each row of training data to calculate the distance between them. Use Euclidean distance as the distance metric (you can explore other metrics). Sort the results in ascending order based on distance values. For each neighbor, find the target class. 
+**5)** Create the predict function. Iterate through the test data and each row of training data to calculate the distance between them. Use Euclidean distance as the distance metric (you can explore other metrics). Sort the results in ascending order based on distance values. For each neighbor, find the target class and use majority voting to determine the prediction.
 
 ```python
-def predict(self, X_test):
-    '''predict the distance of KNN'''
-    y = np.zeros(len(X_test))
+def predict(self, X_test: np.ndarray) -> np.ndarray:
+    """Predict class labels for test data.
 
-    '''iterate through the test set'''
-    for ii in range(len(X_test)):
+    Args:
+        X_test: Test features of shape (n_samples, n_features).
 
-        '''distance between test indices and all of the training set indices'''
-        distance = np.array([self.euclidean_distance(X_test[ii], x_ind) for x_ind in self.X_train])
+    Returns:
+        np.ndarray: Predicted labels of shape (n_samples,).
+    """
+    y_pred = np.zeros(len(X_test))
 
-        '''sort indices in ascending order and select k nearest neighbors'''
-        distance_sorted = distance.argsort()[:self.k]
+    for i in range(len(X_test)):
+        # Calculate distances to all training points
+        distances = np.array([
+            self.euclidean_distance(X_test[i], x_train)
+            for x_train in self.X_train
+        ])
 
-        '''for each neighbor find the target_class'''
-        nearest_label = [self.y_train[idx] for idx in distance_sorted]
+        # Get indices of k nearest neighbors
+        k_nearest_indices = distances.argsort()[:self.k]
 
-        y[ii] = max(set(nearest_label), key = nearest_label.count)
+        # Get labels of k nearest neighbors
+        k_nearest_labels = [self.y_train[idx] for idx in k_nearest_indices]
 
-    return y
+        # Vote: most common label wins
+        y_pred[i] = max(set(k_nearest_labels), key=k_nearest_labels.count)
+
+    return y_pred
 ```
 
-**6)** Perform an accuracy score.
+**6)** Calculate the accuracy score.
 
 ```python
-def accuracy(self, y_test, y_pred):
-    '''print an accuracy score'''
-    return f'Accuracy score: {np.mean(y_test==y_pred)}'
+def accuracy(self, y_test: np.ndarray, y_pred: np.ndarray) -> float:
+    """Calculate accuracy score.
+
+    Args:
+        y_test: True labels.
+        y_pred: Predicted labels.
+
+    Returns:
+        float: Accuracy score between 0 and 1.
+    """
+    return np.mean(y_test == y_pred)
 ```
 
 If you've read this far, here's the complete code from above:
