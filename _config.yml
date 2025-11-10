@@ -98,7 +98,7 @@ url-pretty: "github.com/Edudeiko"  # eg. "deanattali.com/beautiful-jekyll"
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-# gtag: ""
+gtag: "G-V5Z0Q0HDSM"
 
 # Fill in your Google Analytics ID to track your website using GA
 # google_analytics: ""
