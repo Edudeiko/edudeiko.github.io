@@ -96,3 +96,7 @@ Series of data analysis projects using Miami-Dade County open data, focusing on 
 ## More Projects
 
 Check out my [GitHub profile](https://github.com/Edudeiko) for more projects and contributions, or read my [blog posts](/) for detailed technical writeups and tutorials.
+
+---
+
+*Last updated: May 2025*

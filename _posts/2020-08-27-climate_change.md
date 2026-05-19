@@ -9,7 +9,7 @@ Deployed Heroku app can be found [here](https://climate-change-overview.herokuap
 Link to GitHub [here](https://github.com/Edudeiko/climate_change)
 
 #### Import libraries first
-```javascript
+```python
 import numpy as np
 import pandas as pd
 import plotly as py
@@ -18,13 +18,13 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 ```
-#### load the data
-you can download the original data from [here](http://google.com)
-```javascript
+#### Load the data
+You can download the original data from [here](http://google.com)
+```python
 df = pd.read_csv('../assets/GlobalLandTemperaturesByCountry.csv')
 ```
 #### Look at the data, find the Null values, clean the data
-```javascript
+```python
 print(df.shape)
 df.head()
 df.tail()
@@ -37,34 +37,34 @@ print(df.shape)
 df.head()
 ```
 #### Creating Celsius to Fahrenheit function
-```javascript
+```python
 def convert_to_fahrenheit(c):
     return (c*9/5)+32
 ```
 #### Round up the result to 2 decimals as well
-```javascript
+```python
 df['Average_Temp_Fahrenheit'] = df['Average_Temp_Celsius'].apply(convert_to_fahrenheit).round(2)
 df['Average_Temp_Celsius'] = df['Average_Temp_Celsius'].round(2)
 ```
 #### Group the dataframe by Country name and dataset
-```javascript
+```python
 df_sorted = df.groupby(['Country', 'Date']).sum().reset_index().sort_values(['Date'], ascending=False)
 df_sorted.head()
 ```
 #### Create the data range
-```javascript
+```python
 start_date = '2009-12-01'
 end_date = '2013-01-01'
 mask = (df_sorted['Date'] > start_date) & (df_sorted['Date'] <= end_date)
 ```
 #### Create a new sorted dataset
-```javascript
+```python
 df_2000 = df_sorted[mask]
 print(df_2000.shape)
 df_2000.head()
 ```
 #### Create a dataset for Climate change by timeline
-```javascript
+```python
 df_2000_by_month = df_2000.groupby(['Date','Country']).sum().reset_index()
 df_2000_by_month.head()
 ```
