@@ -4,15 +4,41 @@ title: Projects
 subtitle: Featured Work in AI, Data Science & Full-Stack Development
 ---
 
+## ✍️ Writing: Shipping Enterprise RAG (4-part series)
+
+**Lessons from building a production RAG assistant for a regulated enterprise**
+
+A deep-dive series on what actually breaks in production RAG systems — and how to engineer around it. Drawn from shipping a RAG assistant over thousands of internal documents with real compliance stakes.
+
+- **Part 1 — Stop optimizing your RAG prompt. The bug is two layers up.** Why most wrong RAG answers are retrieval failures, not prompt failures.
+- **Part 2 — Chunking strategies that beat the default** *(coming soon)*
+- **Part 3 — Hybrid retrieval: BM25 + vector + reranking** *(coming soon)*
+- **Part 4 — Production reality check: evals, observability, cost** *(coming soon)*
+- [Read Part 1 on this site](/2026-06-09-stop-optimizing-your-rag-prompt/) | [Read on Substack & subscribe](https://evgeniidudeiko.substack.com/p/stop-optimizing-your-rag-prompt-the)
+
+---
+
 ## Full-Stack Lead Assignment System
 
-**Enterprise-grade lead management and intelligent routing system**
+**Production lead-routing platform — owned end to end, from data model to UI**
 
-Built a comprehensive lead assignment platform that automates the distribution and tracking of leads across sales teams. The system features intelligent routing algorithms, real-time dashboard analytics, and workflow automation.
+A company-wide platform that automates how inbound leads are scored, routed, and tracked across sales teams — replacing a manual, error-prone hand-off process. I owned the full stack: the SQL Server data model, the FastAPI services, the business-rules engine, and the React dashboard the team uses every day.
 
-- **Tech Stack:** Python, JavaScript, FastAPI, MS SQL Server, RESTful APIs
-- **Key Features:** Automated lead routing, real-time analytics, custom business rules engine
-- **Impact:** Streamlined lead distribution process, improved response times, enhanced team productivity
+**The problem.** Leads were distributed by hand, which meant slow response times, uneven workloads, and no visibility into where deals stalled. The business needed routing that was fast, fair, and configurable without a developer in the loop.
+
+**What I built.**
+
+- A **configurable business-rules engine** so operations can change routing logic (territory, capacity, priority, round-robin) without code changes
+- **Real-time dashboards** for assignment status, team workload, and response-time analytics
+- A **FastAPI** backend exposing RESTful services over an **MS SQL Server** data model, with a **React** front end
+- Deployed and operated on **Azure**
+
+**Architecture:** React (UI) → FastAPI (REST services + rules engine) → MS SQL Server, hosted on Azure.
+
+- **Tech Stack:** Python, FastAPI, React, JavaScript, MS SQL Server, RESTful APIs, Azure
+- **Role:** Sole full-stack engineer — data model, backend, rules engine, frontend, deployment
+- **Impact:** Automated lead distribution, faster and more even response times, and live visibility into the pipeline for the sales team
+
 
 ---
 
@@ -38,7 +64,7 @@ Built a comprehensive Spotify API wrapper with custom ML-based song recommendati
 - **Tech Stack:** Python, Flask, Spotify API, scikit-learn, Heroku
 - **Features:** Track search, audio feature analysis, ML-powered recommendations
 - **Results:** Successfully deployed 3 production APIs serving recommendations
-- [Live Demo](https://sp-search.herokuapp.com/track_search_ready/test) | [GitHub](https://github.com/Edudeiko/dj_helper_search_api) | [Blog Post](/2020-08-28-building_API_calls/)
+- [GitHub](https://github.com/Edudeiko/dj_helper_search_api) | [Blog Post](/2020-08-28-building_API_calls/)
 
 ---
 
@@ -51,7 +77,7 @@ Created an interactive web application to visualize historical climate data acro
 - **Tech Stack:** Python, Plotly, Pandas, Flask, Heroku
 - **Features:** Interactive time-series animations, country-level analysis, Celsius/Fahrenheit conversion
 - **Impact:** Made complex climate data accessible and engaging
-- [Live Demo](https://climate-change-overview.herokuapp.com) | [GitHub](https://github.com/Edudeiko/climate_change) | [Blog Post](/2020-08-27-climate_change/)
+- [GitHub](https://github.com/Edudeiko/climate_change) | [Blog Post](/2020-08-27-climate_change/)
 
 ---
 
@@ -64,7 +90,7 @@ Developed a classification model to predict heart disease using patient health m
 - **Tech Stack:** Python, scikit-learn, XGBoost, Flask, Plotly
 - **Results:** Achieved 95%+ prediction accuracy
 - **Features:** Interactive web interface, real-time predictions, feature importance visualization
-- [Live Demo](https://heartdiseasepredictionbyed.herokuapp.com) | [GitHub](https://github.com/Edudeiko/DS-Unit-2-Applied-Modeling/blob/master/E_D_heart__disease_prediction.ipynb) | [Medium Article](https://medium.com/@evgeniy.dudeyko/creating-the-models-to-predict-a-heart-disease-with-the-features-importances-visualization-5542c447e99f)
+- [GitHub](https://github.com/Edudeiko/DS-Unit-2-Applied-Modeling/blob/master/E_D_heart__disease_prediction.ipynb) | [Medium Article](https://medium.com/@evgeniy.dudeyko/creating-the-models-to-predict-a-heart-disease-with-the-features-importances-visualization-5542c447e99f)
 
 ---
 
@@ -99,4 +125,4 @@ Check out my [GitHub profile](https://github.com/Edudeiko) for more projects and
 
 ---
 
-*Last updated: May 2025*
+*Last updated: June 2026*

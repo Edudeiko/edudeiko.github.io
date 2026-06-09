@@ -23,6 +23,7 @@ navbar-links:
   About: "aboutme"
   Projects: "projects"
   Blog: "index"
+  Newsletter: "https://evgeniidudeiko.substack.com"
   GitHub: "https://github.com/Edudeiko"
   LinkedIn: "https://www.linkedin.com/in/ed-dudeiko"
 

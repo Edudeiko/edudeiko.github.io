@@ -77,7 +77,10 @@
 
   <meta property="og:type" content="website" />
 
-  {% if page.id %}
+  {% if page.canonical-url %}
+  <meta property="og:url" content="{{ page.canonical-url }}" />
+  <link rel="canonical" href="{{ page.canonical-url }}" />
+  {% elsif page.id %}
   <meta property="og:url" content="{{ page.url | absolute_url }}" />
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
   {% else %}

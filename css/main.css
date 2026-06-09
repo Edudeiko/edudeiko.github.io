@@ -1075,6 +1075,35 @@ pre code {
   color: var(--accent-purple);
 }
 
+/* --- Home hero / positioning --- */
+
+.home-hero {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 28px 32px 16px;
+  margin-bottom: 36px;
+}
+
+.home-hero-intro {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0 0 18px;
+}
+
+.home-hero-intro strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.home-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
 /* --- Page content card --- */
 
 .page-content-inner,
