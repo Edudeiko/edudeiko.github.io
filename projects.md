@@ -39,9 +39,6 @@ A company-wide platform that automates how inbound leads are scored, routed, and
 - **Role:** Sole full-stack engineer — data model, backend, rules engine, frontend, deployment
 - **Impact:** Automated lead distribution, faster and more even response times, and live visibility into the pipeline for the sales team
 
-<!-- TODO (Ed): drop in real numbers if you can share them — e.g. "X leads/day routed automatically", "response time cut from X to Y", "N sales reps / teams served". Quantified impact is the single biggest credibility boost here. -->
-<!-- TODO (Ed): if any artifact is shareable (redacted screenshot, architecture diagram, or repo), link it — recruiters trust shown over told. -->
-
 
 ---
 
