@@ -74,6 +74,13 @@ My work sits at the intersection of machine learning, data engineering, and soft
 - Interactive choropleth map showing global temperature changes from 1750 to 2013
 - Time-series animations with Plotly; real-time Celsius/Fahrenheit conversion
 
+## Writing
+
+I write about the engineering realities of building AI systems in production. My current series, **Shipping Enterprise RAG**, breaks down what actually fails in real-world retrieval-augmented generation — and how I engineered around it on a regulated, high-stakes deployment.
+
+- [Stop optimizing your RAG prompt. The bug is two layers up.](/2026-06-09-stop-optimizing-your-rag-prompt/) — Part 1 of 4
+- [Read the series on Substack →](SUBSTACK_URL_PLACEHOLDER)
+
 ## What I'm Looking For
 
 I'm open to roles where I can do meaningful technical work across the full stack — ideally combining AI/ML with cloud engineering and product-facing features. Strong fits include:
