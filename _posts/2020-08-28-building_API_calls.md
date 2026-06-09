@@ -26,7 +26,7 @@ https://sp-search.herokuapp.com/callback/.
 {: .box-note}
 **Note:** You need to change URIs to your own localhost and to the host you will deploy your APIs to.
 
-By the end of the project, I created 3 APIs. The [first](https://sp-search.herokuapp.com/track_search_ready/test) searches for a track, the [second](https://sp-search.herokuapp.com/audio_features/in-to-the-sun) searches for a track and returns 10 tracks with audio features, and the [third](https://sp-search.herokuapp.com/predict/4R2kfaDFhslZEMJqAFNpdd) returns the 4 most similar songs based on audio features using K-Nearest Neighbors. I deployed the APIs on Heroku and shared them with the backend team.
+By the end of the project, I created 3 APIs. The **first** searches for a track, the **second** searches for a track and returns 10 tracks with audio features, and the **third** returns the 4 most similar songs based on audio features using K-Nearest Neighbors. I deployed the APIs on Heroku and shared them with the backend team. *(The original endpoints were hosted on Heroku's free tier, which has since been retired — see the source below to run them yourself.)*
 
 You can find the full code [here](https://github.com/Edudeiko/dj_helper_search_api/blob/master/run.py)
 

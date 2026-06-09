@@ -14,19 +14,34 @@ A deep-dive series on what actually breaks in production RAG systems — and how
 - **Part 2 — Chunking strategies that beat the default** *(coming soon)*
 - **Part 3 — Hybrid retrieval: BM25 + vector + reranking** *(coming soon)*
 - **Part 4 — Production reality check: evals, observability, cost** *(coming soon)*
-- [Read Part 1 on this site](/2026-06-09-stop-optimizing-your-rag-prompt/) | [Read on Substack & subscribe](SUBSTACK_URL_PLACEHOLDER)
+- [Read Part 1 on this site](/2026-06-09-stop-optimizing-your-rag-prompt/) | [Read on Substack & subscribe](https://evgeniidudeiko.substack.com/p/stop-optimizing-your-rag-prompt-the)
 
 ---
 
 ## Full-Stack Lead Assignment System
 
-**Enterprise-grade lead management and intelligent routing system**
+**Production lead-routing platform — owned end to end, from data model to UI**
 
-Built a comprehensive lead assignment platform that automates the distribution and tracking of leads across sales teams. The system features intelligent routing algorithms, real-time dashboard analytics, and workflow automation.
+A company-wide platform that automates how inbound leads are scored, routed, and tracked across sales teams — replacing a manual, error-prone hand-off process. I owned the full stack: the SQL Server data model, the FastAPI services, the business-rules engine, and the React dashboard the team uses every day.
 
-- **Tech Stack:** Python, JavaScript, FastAPI, MS SQL Server, RESTful APIs
-- **Key Features:** Automated lead routing, real-time analytics, custom business rules engine
-- **Impact:** Streamlined lead distribution process, improved response times, enhanced team productivity
+**The problem.** Leads were distributed by hand, which meant slow response times, uneven workloads, and no visibility into where deals stalled. The business needed routing that was fast, fair, and configurable without a developer in the loop.
+
+**What I built.**
+
+- A **configurable business-rules engine** so operations can change routing logic (territory, capacity, priority, round-robin) without code changes
+- **Real-time dashboards** for assignment status, team workload, and response-time analytics
+- A **FastAPI** backend exposing RESTful services over an **MS SQL Server** data model, with a **React** front end
+- Deployed and operated on **Azure**
+
+**Architecture:** React (UI) → FastAPI (REST services + rules engine) → MS SQL Server, hosted on Azure.
+
+- **Tech Stack:** Python, FastAPI, React, JavaScript, MS SQL Server, RESTful APIs, Azure
+- **Role:** Sole full-stack engineer — data model, backend, rules engine, frontend, deployment
+- **Impact:** Automated lead distribution, faster and more even response times, and live visibility into the pipeline for the sales team
+
+<!-- TODO (Ed): drop in real numbers if you can share them — e.g. "X leads/day routed automatically", "response time cut from X to Y", "N sales reps / teams served". Quantified impact is the single biggest credibility boost here. -->
+<!-- TODO (Ed): if any artifact is shareable (redacted screenshot, architecture diagram, or repo), link it — recruiters trust shown over told. -->
+
 
 ---
 

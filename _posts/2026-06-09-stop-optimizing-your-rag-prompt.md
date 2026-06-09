@@ -3,11 +3,11 @@ layout: post
 title: "Stop optimizing your RAG prompt. The bug is two layers up."
 subtitle: "Part 1 of 4: What I learned shipping enterprise RAG"
 tags: [RAG, LLM, AI, Retrieval, Vector Databases, Machine Learning, Enterprise, Production]
-canonical-url: "SUBSTACK_URL_PLACEHOLDER"
+canonical-url: "https://evgeniidudeiko.substack.com/p/stop-optimizing-your-rag-prompt-the"
 ---
 
 > **📬 This is Part 1 of a 4-part series on shipping enterprise RAG.**
-> Originally published on my Substack. [Read it there and subscribe for free →](SUBSTACK_URL_PLACEHOLDER) to get Parts 2–4 the moment they drop.
+> Originally published on my Substack. [Read it there and subscribe for free →](https://evgeniidudeiko.substack.com/p/stop-optimizing-your-rag-prompt-the) to get Parts 2–4 the moment they drop.
 
 Last year I shipped a RAG assistant for a regulated enterprise: thousands of internal documents, hundreds of users, real compliance stakes. It held up in production, largely because I built it expecting the part that actually breaks to break.
 
@@ -63,4 +63,4 @@ If you've shipped RAG to production, or you're about to, this series is for you.
 
 ---
 
-*Parts 2, 3, and 4 go deep on chunking, hybrid retrieval, and production evals.* **[Subscribe for free on Substack →](SUBSTACK_URL_PLACEHOLDER)** to get each one the moment it drops.
+*Parts 2, 3, and 4 go deep on chunking, hybrid retrieval, and production evals.* **[Subscribe for free on Substack →](https://evgeniidudeiko.substack.com/p/stop-optimizing-your-rag-prompt-the)** to get each one the moment it drops.
