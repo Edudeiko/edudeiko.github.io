@@ -26,6 +26,8 @@ My work sits at the intersection of machine learning, data engineering, and soft
 <span class="skill-badge accent">TensorFlow</span>
 <span class="skill-badge accent">PyTorch</span>
 <span class="skill-badge accent">OpenAI API</span>
+<span class="skill-badge accent">LibreChat</span>
+<span class="skill-badge accent">LiteLLM</span>
 
 **Data & Analytics**
 
@@ -50,6 +52,9 @@ My work sits at the intersection of machine learning, data engineering, and soft
 <span class="skill-badge purple">RESTful APIs</span>
 <span class="skill-badge purple">Azure</span>
 <span class="skill-badge purple">Docker</span>
+<span class="skill-badge purple">Terraform</span>
+<span class="skill-badge purple">ECS</span>
+<span class="skill-badge purple">EKS</span>
 <span class="skill-badge purple">Git / GitHub</span>
 <span class="skill-badge purple">Jupyter</span>
 
